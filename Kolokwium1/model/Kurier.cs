@@ -46,12 +46,21 @@ public class Kurier
       }
    }
 
-   public void dostarczPrzesylke(int idPrzesylki)
+   public bool dostarczPrzesylke(int idPrzesylki)
    {
       Przesylka przesylka = przesylki.Find(przesylka => przesylka.getIdPrzesylki() == idPrzesylki);
-      przesylka.dostarcz();
-      double zwolnioneMiejsce = getLadownosc() + przesylka.waga();
-      setLadownosc(zwolnioneMiejsce);
+
+      if (przesylka != null)
+      {
+         przesylka.dostarcz();
+         double zwolnioneMiejsce = getLadownosc() + przesylka.waga();
+         setLadownosc(zwolnioneMiejsce);
+         return true;
+      }
+      else
+      {
+         return false;
+      }
    }
 
    public string raportPrzysylkiDostarczone()
