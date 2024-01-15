@@ -5,7 +5,7 @@ public class Zbiornik : Przesylka
     private double pojemnosc;
     private double gestosc;
 
-    public Zbiornik(string id, string opis, double pojemnosc, double gestosc) : base(id, opis)
+    public Zbiornik(int id, string opis, double pojemnosc, double gestosc) : base(id, opis)
     {
         this.pojemnosc = pojemnosc;
         this.gestosc = gestosc;

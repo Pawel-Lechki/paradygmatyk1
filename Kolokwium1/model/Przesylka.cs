@@ -2,19 +2,23 @@
 
 public class Przesylka
 {
-    private string id;
+    private int id;
     private string opis;
     private bool dostarczona;
     private double masa;
 
 
-    public Przesylka(string id, string opis)
+    public Przesylka(int id, string opis)
     {
         this.id = id;
         this.opis = opis;
         this.dostarczona = false;
     }
 
+    public int getIdPrzesylki()
+    {
+        return this.id;
+    }
     public bool czyDostarczona()
     {
         return this.dostarczona;

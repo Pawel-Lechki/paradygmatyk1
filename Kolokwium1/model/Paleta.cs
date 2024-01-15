@@ -6,7 +6,7 @@ public class Paleta : Przesylka
     private double masaPudelka;
 
 
-    public Paleta(string id, string opis, int liczbaPudelek, double masaPudelka) : base(id, opis)
+    public Paleta(int id, string opis, int liczbaPudelek, double masaPudelka) : base(id, opis)
     {
         this.liczbaPudelek = liczbaPudelek;
         this.masaPudelka = masaPudelka;
@@ -19,6 +19,6 @@ public class Paleta : Przesylka
 
     public override string info()
     {
-        return base.info() + $", na palacie jest {this.liczbaPudelek} pudelek, o masie {this.masaPudelka} każde";
+        return base.info() + $", na palacie jest {this.liczbaPudelek} pudelek, o masie {this.masaPudelka} kg każde";
     }
 }
